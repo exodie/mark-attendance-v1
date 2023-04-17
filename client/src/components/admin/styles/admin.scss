@@ -1,0 +1,74 @@
+.admin_auth {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+
+  &-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 70% 0 0 0;
+
+    &_title {
+      margin: 0 0 10px 0;
+    }
+
+    &_input {
+      margin: 10px 0 10px 0;
+      width: 45vw;
+      font-size: 16px;
+    }
+
+    &_btn {
+      margin: 10px 0 10px 0;
+      width: 45vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+  }
+}
+
+.admin {
+
+  &-main {
+    width: 100vw;
+    height: 100vh;
+
+    &_choice {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-text {
+        font-size: 16px;
+        margin: 0 5px 0 0;
+      }
+
+      &-btn {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0 5px;
+      }
+    }
+
+    &_title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    
+
+    &_choice_time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px 0 10px;
+    }
+  }
+}

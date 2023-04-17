@@ -1,0 +1,1 @@
+export const getItemFromObj = (obj: any[]) => obj.map((item) => item.lessons);
