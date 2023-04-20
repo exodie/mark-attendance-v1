@@ -5,9 +5,45 @@ import type { DateDayProps } from "../../types/types.js";
 import { getItemFromObj } from "../../utils.js";
 
 export class LessonsController {
+    public getCurrentLessons(dayNumber: number, type?: "title" | "time"): string | undefined {
+        try {
+            switch (type) {
+                case "title":
+                    const lessonsTitle = new Set<string>();
+
+                    lessonsTitle.add(allLessonsDay.map(item =>
+                        item.lessons[dayNumber].map(item => item.title)).toString()
+                    )
+
+                    return lessonsTitle.values().next().value;
+
+                case "time":
+                    const lessonsTime = new Set<string>();
+
+                    lessonsTime.add(
+                        allLessonsDay.map(item =>
+                            item.lessons[dayNumber].map(time => [time.start, time.end])).toString()
+                    )
+
+                    return lessonsTime.values().next().value;
+
+                default: break;
+            }
+
+            const lessonsTitle = new Set<string>();
+
+            lessonsTitle.add(allLessonsDay.map(item =>
+                item.lessons[dayNumber].map(item => item.title)).toString()
+            )
+
+            return lessonsTitle.values().next().value;
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     public async getAllLessons(req: Request, res: Response) {
         try {
-//            let currentLessonsNumber: number = 0;
             const date = new Date();
             const currentDay = date.getDay();
             const days: DateDayProps[] = ["Sun", "Mon", "Tue", "Wen", "Thi", "Fri", "Sat"];
@@ -52,7 +88,10 @@ export class LessonsController {
                     return res.send({ message: "Сегодня выходной, отдыхай!", status: false });
 
                 case "Mon":
-                    if (Number(currentHours) >= Number(currentLessonsStartArray[0]) && Number(currentMinutes) >= Number(currentLessonsStartArray[1]) && Number(currentHours) <= Number(currentLessonsEndArray[0]) && Number(currentMinutes) <= Number(currentLessonsEndArray[1])) {
+                    if (Number(currentHours) >= Number(currentLessonsStartArray[0])
+                        && Number(currentMinutes) >= Number(currentLessonsStartArray[1])
+                        && Number(currentHours) <= Number(currentLessonsEndArray[0])
+                        && Number(currentMinutes) <= Number(currentLessonsEndArray[1])) {
                         if (Number(currentHours) >= Number(objLessonsStart[0])) {
                             return res.send({ message: currentLessons });
                         }

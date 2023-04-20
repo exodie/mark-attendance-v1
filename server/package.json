@@ -1,6 +1,6 @@
 {
   "name": "group-admin-pri-23-backend",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mini backend server for send data to client",
   "scripts": {
     "dev": "npx nodemon",
