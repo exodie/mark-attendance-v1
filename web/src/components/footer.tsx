@@ -10,15 +10,15 @@ export const Footer = () => {
 
   return (
     <footer className="w-full p-2 flex items-center mb-0 mt-auto">
-      <span className="text-background font-medium text-[12px]">
+      <span className="font-medium text-[12px]">
         *Работает только с ПрИ-23
       </span>
 
       <div className="mr-0 ml-auto">
-        <Button size={"icon"} variant={"link"} onClick={() => setTheme("dark")}>
+        <Button size={"icon"} variant={"link"} onClick={() => setTheme("light")}>
           <SunIcon className="w-6 h-6" />
         </Button>
-        <Button size={"icon"} variant={"link"} onClick={() => setTheme("light")}>
+        <Button size={"icon"} variant={"link"} onClick={() => setTheme("dark")}>
           <MoonIcon className="w-6 h-6" />
         </Button>
       </div>

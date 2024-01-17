@@ -18,7 +18,7 @@ import { GetStatusOfUser } from "../status-user";
 
 export const GroupCart: FC<Group> = (props) => {
   return (
-    <Card className="bg-foreground border-2 text-white">
+    <Card className="border-2">
       <CardHeader>
         <CardTitle>{props.title}</CardTitle>
         <CardDescription className="max-w-[250px]">
