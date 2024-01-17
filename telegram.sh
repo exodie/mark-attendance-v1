@@ -1,12 +1,9 @@
 #!/bin/bash
 
 COMMIT_MESSAGE=$(git log -1 --pretty=%B)
-REPO_NAME=$(basename -s .git `git config --get remote.origin.url`)
+REPOSITORY_NAME=$(basename -s .git `git config --get remote.origin.url`)
 
-MESSAGE="Новое изменение в репозитории $REPO_NAME! Сообщение: $COMMIT_MESSAGE"
+TELEGRAM_MESSAGE="Новый коммит в репозитории $REPOSITORY_NAME!
+Сообщение коммита: $COMMIT_MESSAGE"
 
-curl -s -X POST \
-  https://api.telegram.org/bot6710558601:AAEmZ5WhpQyTJ2DMUnJD-GsQ4MiAVq_4RIE/sendMessage \ 
-  -d chat_id=-1001926355641 \ 
-  -d text="$MESSAGE" \ 
-  -d message_thread_id=10
+curl -s -X POST https://api.telegram.org/bot6710558601:AAEmZ5WhpQyTJ2DMUnJD-GsQ4MiAVq_4RIE/sendMessage?chat_id=-1001926355641&text=$TELEGRAM_MESSAGE&message_thread_id=10
