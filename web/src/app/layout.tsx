@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "./providers";
+import { Navbar } from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <header>
+            <Navbar />
+          </header>
           <main className="flex flex-col w-full min-h-screen">
             {children}
 
