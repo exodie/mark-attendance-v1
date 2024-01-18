@@ -14,7 +14,7 @@ export const Footer = () => {
         *Работает только с ПрИ-23
       </span>
 
-      <div className="mr-0 ml-auto">
+      <div className="p-2 mr-0 ml-auto">
         <Button size={"icon"} variant={"link"} onClick={() => setTheme("light")}>
           <SunIcon className="w-6 h-6" />
         </Button>
