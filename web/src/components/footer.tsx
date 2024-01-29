@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <footer className="w-full p-2 flex items-center mb-0 mt-auto">
       <span className="font-medium text-[12px]">
-        *Работает только с ПрИ-23
+        *Временно будет работать только с одной группой
       </span>
 
       <div className="p-2 mr-0 ml-auto">

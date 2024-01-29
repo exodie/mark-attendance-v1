@@ -24,7 +24,7 @@ export const GroupCart: FC<Group> = (props) => {
   }
 
   return (
-    <Card className="border-2">
+    <Card className="border-1">
       <CardHeader>
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>
