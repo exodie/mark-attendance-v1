@@ -2,8 +2,6 @@ import { FC } from "react";
 import Link from "next/link";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
-import { v4 as uuidv4 } from 'uuid';
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,10 +17,6 @@ import { Group } from "@/interfaces";
 import { GetStatusOfUser } from "../status-user";
 
 export const GroupCart: FC<Group> = (props) => {
-  const generateUuidOfGroup = () => {
-    return uuidv4();
-  }
-
   return (
     <Card className="border-1">
       <CardHeader>
@@ -46,7 +40,7 @@ export const GroupCart: FC<Group> = (props) => {
         </ul>
       </CardContent>
       <CardFooter className="w-full flex flex-row gap-2">
-        <Link href={`/auth/signin/${generateUuidOfGroup()}`}>
+        <Link href={`/auth/signin/${props.title}`}>
           <Button>Отметить</Button>
         </Link>
         <Button disabled>Взаимодействие</Button>
