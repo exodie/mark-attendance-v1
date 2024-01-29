@@ -5,6 +5,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "./providers";
 import { Navbar } from "@/components/navbar";
+import StoreProvider from "./store-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,21 +22,23 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={`${inter.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <header>
-            <Navbar />
-          </header>
-          <main className="flex flex-col w-full min-h-screen">
-            {children}
+        <StoreProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <header>
+              <Navbar />
+            </header>
+            <main className="flex flex-col w-full min-h-screen">
+              {children}
 
-            <Footer />
-          </main>
-        </ThemeProvider>
+              <Footer />
+            </main>
+          </ThemeProvider>
+        </StoreProvider>
       </body>
     </html>
   );
