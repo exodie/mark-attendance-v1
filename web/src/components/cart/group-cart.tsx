@@ -40,7 +40,7 @@ export const GroupCart: FC<Group> = (props) => {
         </ul>
       </CardContent>
       <CardFooter className="w-full flex flex-row gap-2">
-        <Link href={`/auth/signin/${props.title}`}>
+        <Link href={`/auth/signin/${props.id}`}>
           <Button>Отметить</Button>
         </Link>
         <Button disabled>Взаимодействие</Button>

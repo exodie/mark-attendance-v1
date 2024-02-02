@@ -17,6 +17,7 @@ export const FilteredGroupComponent: FC<Props> = (props) => {
       {filteredGroups.map((item, index) => (
         <GroupCart
           key={index}
+          id={item.id}
           title={item.title}
           description={item.description}
           responsiblePerson={item.responsiblePerson}
