@@ -12,7 +12,7 @@ export default function GroupsSelection() {
   const state = useAppSelector(selectGroups);
 
   return (
-    <section className="flex flex-col m-auto px-28">
+    <section className="flex flex-col m-auto px-12">
       <nav className="flex sm:flex-row md:flex-row lg:flex-row flex-col items-center justify-center w-full py-10">
         <h1 className="font-medium text-xl">Выберите вашу группу</h1>
 
