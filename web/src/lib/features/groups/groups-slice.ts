@@ -12,6 +12,7 @@ export interface GroupsState {
 const initialState: GroupsState = {
   groups: [
     {
+      id: "",
       title: "",
       description: "",
       responsiblePerson: [
@@ -39,7 +40,7 @@ export const groupsSlice = createSlice({
 
     setSearchParams: (state, { payload }) => {
       state.search = payload;
-    }
+    },
   },
 });
 
