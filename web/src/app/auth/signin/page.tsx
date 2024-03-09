@@ -1,5 +1,6 @@
-import { Button, Input } from "@/components/ui";
 import Link from "next/link";
+
+import { Button, Input } from "@/components/ui";
 
 export default function SignInWithSlugs() {
   return (
@@ -24,7 +25,7 @@ export default function SignInWithSlugs() {
       <div className="flex flex-row items-center ml-0 gap-2">
         <label>Хотите добавить группу?</label>
         <Link href={"/addGroup"}>
-          <Button size={"default"}>Добавить</Button>
+          <Button size={"default"}>Оставить обращение</Button>
         </Link>
       </div>
     </form>
