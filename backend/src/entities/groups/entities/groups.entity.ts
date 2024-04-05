@@ -2,7 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 
 import type { Group as IGroup, ResponsiblePersonOfGroup } from 'src/interfaces';
 
-export class Group implements IGroup {
+export class GroupEntity implements IGroup {
   @ApiProperty({
     example: 2,
     description: 'The number of current course of groups',

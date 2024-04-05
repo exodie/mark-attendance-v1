@@ -1,7 +1,7 @@
 import { ResponsiblePersonOfGroup } from 'src/interfaces';
-import { Group } from '../entities/groups.entity';
+import { GroupEntity } from '../entities/groups.entity';
 
-export class CreateGroupsDto implements Group {
+export class CreateGroupsDto implements GroupEntity {
   course: number;
   title: string;
   description: string;

@@ -2,9 +2,11 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import type { Model } from 'mongoose';
 
-import type { CreateGroupsDto } from './dto/createGroups.dto';
-import { NameModels } from 'src/interfaces/model.enum';
-import { Groups } from 'src/models/groups.model';
+import type { CreateGroupsDto } from './dto';
+
+import { NameModels } from 'src/interfaces';
+
+import { Groups } from 'src/models';
 
 @Injectable()
 export class GroupsService {

@@ -6,7 +6,7 @@ import { GroupsService } from './groups.service';
 
 import { NameModels } from 'src/interfaces';
 
-import { GroupsSchema } from 'src/models/groups.model';
+import { GroupsSchema } from 'src/models/';
 
 @Module({
   imports: [
