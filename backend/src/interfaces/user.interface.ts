@@ -1,3 +1,5 @@
+import { type Group } from './group.interface';
+
 /**
  * @param login login user
  * @param password hash password user
@@ -10,5 +12,5 @@ export interface User {
   password: string;
   name: string;
   link: string;
-  group: string;
+  group: Group;
 }
